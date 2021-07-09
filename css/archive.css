@@ -1,0 +1,9 @@
+/* 
+    Created on : 22.10.2018, 15:07:03
+    Author     : connie
+*/
+
+.page-swipe{
+    touch-action: pan-left;
+    touch-action: pan-right;
+}

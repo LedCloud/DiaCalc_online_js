@@ -1,0 +1,18 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 02.10.2017, 13:47:16
+    Author     : connie
+*/
+
+#main {
+  height: 99vh;
+}
+
+#coefs-table-body{
+overflow-y: scroll;
+/*height: 55vh;*/
+}

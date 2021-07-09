@@ -1,0 +1,52 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Dec 27, 2016, 3:42:07 PM
+    Author     : connie
+*/
+
+.weightfield{
+    width: 75px !important;
+    position: absolute;
+    top: 10px;
+    right: 15px;
+}
+
+.center-p{
+margin: 0 auto !important;
+text-align: center;
+}
+
+.dispInline, .dispInlineLabel{
+    display: inline-block;
+    border-bottom-width:0;
+}
+.dispInlineLabel{
+    min-width: 70px !important;
+}
+.dispInline{
+     min-width: 75px;
+     max-width: 110px;
+}
+.clearFloats{
+    clear:both;
+}
+.ui-filter-inset {
+    margin-top: 0;
+}
+.page-swipe{
+    touch-action: pan-left;
+    touch-action: pan-right;
+}
+#results{
+    background-size: 0% 100%;
+    /*background-image: linear-gradient(to right, #3FCD8C 0%, #3FCD8C 0%, red 70%, red 100%);*/
+    background-position: top left;
+    background-repeat: no-repeat;
+}
+#popupDoses{
+    padding: 10px;
+}

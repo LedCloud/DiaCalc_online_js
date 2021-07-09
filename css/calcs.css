@@ -1,0 +1,36 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 13.10.2018, 16:45:02
+    Author     : connie
+*/
+
+.names{
+    width: 7em;
+}
+.meas{
+    width: 6.5em;
+}
+.names2{
+    width: 5em;
+}
+table{
+    width: 100%;
+}
+table td,th{
+    text-align: center;
+}
+table tr:nth-child(even) {
+   background-color: #ddd;
+}
+/* not used, could be removed */
+.bmi-group{
+    padding-right: 40px;
+    background-size: 30px 100%;
+    background-image: linear-gradient(to top, green 0%, green 70%, white 70%, white 100%);
+    background-position: top right;
+    background-repeat: no-repeat;
+}

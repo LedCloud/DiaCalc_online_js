@@ -1,0 +1,123 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Mar 31, 2017, 3:59:57 PM
+    Author     : connie
+*/
+#main {
+  height: 90vh;
+  margin-bottom: 5px;
+}
+#groups-list,#prods-list,#menu-list{
+    overflow-y: scroll;
+/*height: 80vh;*/
+}
+.results-hidden{
+    display: none;
+}
+input.form-control{
+    padding: 3px;
+}
+.weight-input{
+    min-width: 65px;
+}
+.unselectable {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+.infloat { 
+    width: 65px;
+    margin-right: 5px;
+    margin-left: 2px;
+}
+.infloat:focus{
+    background-color: yellow;
+}
+.dose-res-bigger{
+    font-size: 1.25em;
+}
+.panel-body{
+    padding: 7px;
+}
+.padding-sm{
+    padding-left: 5px;
+    padding-right: 5px;
+}
+.panel{
+    margin-bottom: 10px;
+}
+.results-table tr:nth-child(odd) {
+   background-color: #ddd;
+}
+
+#ruler-prot{
+    width: 33%;
+    font-weight: bold;
+}
+#ruler-fat{
+    width: 33%;
+    font-weight: bold;
+}
+#ruler-carb{
+    width: 34%;
+    font-weight: bold;
+}
+.ui-autocomplete-loading {
+    background: white url("/images/ui-anim_basic_16x16.gif") right center no-repeat;
+}
+
+#navbar{
+    margin-bottom: 5px;
+}
+
+#coefs-choice{
+    padding-bottom: 1px;
+    padding-top: 1px;
+    margin-bottom: 5px;
+    height: auto;
+}
+
+.selector-not-in-use{
+    color: #666;
+    background-color: #ddd;
+}
+
+body{
+    color: #222;
+}
+.form-control{
+    color: #333;
+}
+#top-menu{
+    padding-right: 7px;
+    padding-bottom: 2px;
+}
+#calor-progressbar{
+    text-align: center;
+    background-size: 0% 100%;
+    background-position: top left;
+    background-repeat: no-repeat;
+}
+
+table td{
+    text-align: center;
+}
+.table-striped td:nth-child(odd) {
+   background-color: #ddd;
+}
+.results{
+    font-weight: bold;
+}
+#message-alert{
+    position:fixed;
+    z-index:10;
+    top: 20px;
+    right: 20px;
+}

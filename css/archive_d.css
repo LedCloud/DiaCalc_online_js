@@ -1,0 +1,21 @@
+#main {
+  height: 90vh;
+  margin-bottom: 5px;
+}
+#navbar{
+    margin-bottom: 5px;
+}
+#groups-list,#prods-list{
+    overflow-y: scroll;
+/*height: 80vh;*/
+}
+.bigger{
+    font-size: 1.25em;
+    font-weight: bold;
+}
+#message-alert{
+    position:fixed;
+    z-index:10;
+    top: 20px;
+    right: 20px;
+}

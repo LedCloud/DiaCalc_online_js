@@ -1,0 +1,86 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 29.07.2018, 19:59:59
+    Author     : connie
+*/
+
+.event-normal{
+    background-size: 20% 100%;
+    background-position: top left;
+    background-image: linear-gradient(to left, transparent, #DFF0D8);
+    background-repeat: no-repeat;
+}
+.event-low{
+    background-size: 20% 100%;
+    background-position: top left;
+    background-image: linear-gradient(to left, transparent, #D9EDF7);
+    background-repeat: no-repeat;
+}
+
+.event-warning{
+    background-size: 20% 100%;
+    background-position: top left;
+    background-image: linear-gradient(to left, transparent, #FCF8E3);
+    background-repeat: no-repeat;
+}
+.event-danger{
+    background-size: 20% 100%;
+    background-position: top left;
+    background-image: linear-gradient(to left, transparent, #F2DEDE);
+    background-repeat: no-repeat;
+}
+
+.sideByside .ui-block-a {
+    padding-right: 6px;
+}
+.sideByside .ui-block-b {
+    padding-left: 6px;
+}
+
+.events-list{
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
+}
+.event-time-badge{
+    top: 1.2em !important;
+}
+
+.events{
+    padding-top: .1em;
+    padding-bottom: .1em;
+}
+.event-header{
+    text-align: right;
+}
+#page-menu-info-remark{
+    overflow: auto;
+    margin-top: .1em;
+}
+#page-menu-info-datetime{
+    float: left; 
+    margin-right: .7em; 
+    margin-bottom: 0.2em;
+    font-weight: bold;
+}
+.results{
+    font-weight: bold;
+}
+.menu-page-table{
+    width: 100%; 
+    text-align: center;
+    border-spacing: 0;
+}
+.table-striped td:nth-child(odd) {
+   background-color: #ddd;
+}
+.page-swipe{
+    touch-action: pan-left;
+    touch-action: pan-right;
+}
+.table-striped-horizontal tr:nth-child(odd) {
+   background-color: #ddd;
+}

@@ -1,0 +1,107 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 19.07.2018, 15:37:46
+    Author     : connie
+*/
+#main{
+    height: 90vh;
+    margin-bottom: 5px;
+}
+.events-list{
+    overflow-y: scroll;
+    height: 450px;
+}
+
+.event-info-box{
+    border:1px dotted #003F3F;
+    border-radius: 5px;
+    padding: 0px 1px 0px 1px;
+}
+
+.event-normal{
+    background-size: 15% 100%;
+    background-position: top left;
+    background-image: linear-gradient(to left, transparent, #DFF0D8);
+    background-repeat: no-repeat;
+}
+
+.event-low{
+    background-size: 15% 100%;
+    background-position: top left;
+    background-image: linear-gradient(to left, transparent, #D9EDF7);
+    background-repeat: no-repeat;
+}
+
+.event-warning{
+    background-size: 15% 100%;
+    background-position: top left;
+    background-image: linear-gradient(to left, transparent, #FCF8E3);
+    background-repeat: no-repeat;
+}
+.event-danger{
+    background-size: 15% 100%;
+    background-position: top left;
+    background-image: linear-gradient(to left, transparent, #F2DEDE);
+    background-repeat: no-repeat;
+}
+
+#menu-dlg-preview{
+    max-height: 200px;
+    overflow-y: scroll;
+}
+.dose-res-bigger{
+    font-size: 1.25em;
+    font-weight: bold;
+}
+
+hr{
+    margin-top: 7px;
+    margin-bottom: 7px;
+}
+.menu-dlg-table{
+    width: 100%;
+}
+table td{
+    text-align: center;
+}
+#results-table td:nth-child(odd) {
+   background-color: #ddd;
+}
+
+.menu-dlg-date-info{
+    /*position: absolute;
+    top: 5px;
+    left: 5px;*/
+    border:1px dotted #003F3F;
+    border-radius: 5px;
+    padding: 5px 5px 5px 5px;
+}
+
+#navbar{
+    margin-bottom: 5px;
+}
+.panel-date{
+    background-color: #888 !important;
+    padding-top: 4px;
+    padding-bottom: 4px;
+}
+.panel-date h4{
+    font-size: 1em;
+    font-weight: bold;
+    color: white;
+    text-align: center;
+    
+}
+.hidden-page{
+    display: none;
+}
+.table-striped-horizontal tr:nth-child(odd) {
+   background-color: #ddd;
+}
+.results{
+    font-weight: bold;
+}
