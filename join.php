@@ -25,7 +25,8 @@ if (isset($_POST['send'])) {//Нажали кнопку регистрация
     $email2 = trim($_POST['email2']);
     
     //Тут надо сделать POST гуглу
-    /*$response=file_get_contents("https://www.google.com/recaptcha/api/siteverify?secret=6LcVYiMUAAAAAB3x0kgl7nXlVxe54BcSnV7clAJp&response=".
+    //The key is revoked long time ago
+    /*$response=file_get_contents("https://www.google.com/recaptcha/api/siteverify?secret=secret_key&response=".
             $_POST['g-recaptcha-response']."&remoteip=".$_SERVER['REMOTE_ADDR']);
     $obj = json_decode($response);
     if(!$obj->success == true)
