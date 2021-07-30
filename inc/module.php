@@ -658,12 +658,24 @@ class auth {
     
     function loadCountedGroups($user_id){
         global $base;
+        /*
+         * 
+SELECT g.id, g.name, COUNT(pr.idgroup) AS prodsPerGroup
+FROM backup_groups AS g
+LEFT OUTER JOIN backup_prods AS pr ON pr.idgroup=g.id
+WHERE g.iduser=$user_id
+GROUP BY g.id
+ORDER BY g.sortind;
+         */
         //Делаем два запроса
-        if (!$res=$base->query("SELECT gr.id, gr.name, count(pr.id) AS prodsPerGroup
-                                FROM backup_prods pr 
-                                    INNER JOIN backup_groups gr ON pr.idgroup=gr.id 
-                                    WHERE gr.iduser=$user_id
-                                    GROUP BY gr.id ORDER BY gr.sortind;")){
+        if (!$res=$base->query(
+                "SELECT g.id, g.name, COUNT(pr.idgroup) AS prodsPerGroup
+                FROM backup_groups AS g
+                LEFT OUTER JOIN backup_prods AS pr ON pr.idgroup=g.id
+                WHERE g.iduser=$user_id
+                GROUP BY g.id
+                ORDER BY g.sortind;"
+                                    )){
            dieDB($base->error);
         }
         if ($res->num_rows>0){
@@ -677,43 +689,8 @@ class auth {
             }
         }
         $res->close();
-        if (!$res=$base->query(
-                "SELECT gr.id, gr.name FROM backup_groups gr WHERE gr.iduser='".
-                $user_id."' ORDER BY gr.sortind;")){
-            dieDB($base->error);
-        }
-        if ($res->num_rows>0){
-            //Есть что делать
-            while ($row=$res->fetch_assoc()){
-                $groups_uc[] = array(  
-                    'id'    => $row['id'],
-                    'name'  => $row['name'],
-                    'prPgr' => 0);
-
-            }
-        }
-        $res->close();
-        if (count($groups_c)>0 and count($groups_c)==count($groups_uc)){
-            //Если группы не пустые и кол-во совпадает, то отдаем groups_c
-            $groups = $groups_c;
-        }
-        else if (count($groups_c)==0 and count($groups_uc)==0){//Групп нет
-            $groups = array();//Пустой массив
-        }else{//Группы есть, но есть и пустые группы
-            //Теперь объединяем списки. Нулевой список ($groups_uc) всегда длиннее, поэтому делаем на его основе
-            for($i=0;$i<count($groups_uc);$i++){
-                //$groups_uc[$i]['prPgr'] = $groups_c[$i]['prPgr'];
-                for($j=0;$j<count($groups_c);$j++){
-                    if ($groups_uc[$i]['id'] == $groups_c[$j]['id']){
-                        $groups_uc[$i]['prPgr'] = $groups_c[$j]['prPgr'];
-                        array_splice($groups_c, $j, 1);
-                        break;
-                    }
-                }
-            }
-            $groups = $groups_uc;
-        }
-        return $groups;
+        
+        return $groups_c;
     }
     
     function cleanBase(){
