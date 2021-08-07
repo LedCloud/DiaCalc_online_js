@@ -658,26 +658,18 @@ class auth {
     
     function loadCountedGroups($user_id){
         global $base;
-        /*
-         * 
-SELECT g.id, g.name, COUNT(pr.idgroup) AS prodsPerGroup
-FROM backup_groups AS g
-LEFT OUTER JOIN backup_prods AS pr ON pr.idgroup=g.id
-WHERE g.iduser=$user_id
-GROUP BY g.id
-ORDER BY g.sortind;
-         */
-        //Делаем два запроса
+        
         if (!$res=$base->query(
                 "SELECT g.id, g.name, COUNT(pr.idgroup) AS prodsPerGroup
                 FROM backup_groups AS g
-                LEFT OUTER JOIN backup_prods AS pr ON pr.idgroup=g.id
+                LEFT JOIN backup_prods AS pr ON pr.idgroup=g.id AND pr.iduser=$user_id
                 WHERE g.iduser=$user_id
                 GROUP BY g.id
                 ORDER BY g.sortind;"
                                     )){
            dieDB($base->error);
         }
+        
         if ($res->num_rows>0){
             //Есть что делать
             while ($row=$res->fetch_assoc()){
